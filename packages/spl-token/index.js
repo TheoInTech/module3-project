@@ -14,7 +14,7 @@ import {
 import { readFileSync } from "fs";
 
 (async () => {
-  // Step 1: Connect to cluster and generate a new Keypair
+  // Step 1: Connect to cluster
   const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
   // Insert secret key of your wallet here for the mint account; NEVER UPLOAD
@@ -57,14 +57,13 @@ import { readFileSync } from "fs";
   console.log("Newly minted token: ", tokenMintAccount.toBase58());
 
   //Step 4: Mint a new token to the from account
-  const oneHundred = 100000000000;
   let signature = await mintTo(
     connection,
     fromWallet,
     tokenMintAccount,
     fromTokenAccount.address,
     fromWallet.publicKey,
-    oneHundred,
+    100000000000,
     []
   );
   console.log("Mint tx: ", signature);
@@ -85,7 +84,7 @@ import { readFileSync } from "fs";
     fromTokenAccount.address,
     toTokenAccount.address,
     fromWallet.publicKey,
-    oneHundred,
+    10000000000,
     []
   );
   console.log("Transfer tx: ", signature);
