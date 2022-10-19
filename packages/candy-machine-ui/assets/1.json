@@ -1,7 +1,7 @@
 {
   "name": "Number #0002",
   "symbol": "NB",
-  "description": "Collection of 10 numbers on the blockchain. This is the number 1/10.",
+  "description": "Collection of 10 numbers on the blockchain. This is the number 2/2.",
   "seller_fee_basis_points": 500,
   "image": "1.png",
   "attributes": [
@@ -25,7 +25,7 @@
   "properties": {
     "creators": [
       {
-        "address": "N4f6zftYsuu4yT7icsjLwh4i6pB1zvvKbseHj2NmSQw",
+        "address": "8J4C8vsqEjkksWbDTa1bX923zCmCfvocutGLs8jbWSSM",
         "share": 100
       }
     ],

@@ -11,15 +11,17 @@ import {
   mintTo,
   transfer,
 } from "@solana/spl-token";
+import { readFileSync } from "fs";
 
 (async () => {
   // Step 1: Connect to cluster and generate a new Keypair
   const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
   // Insert secret key of your wallet here for the mint account; NEVER UPLOAD
-  const fromWallet = Keypair.fromSecretKey(
-    Uint8Array.from(`PUT HERE THE SECRET KEY`)
+  const deviceWallet = JSON.parse(
+    readFileSync("C:/Users/PCPC/.config/solana/id.json", "utf8")
   );
+  const fromWallet = Keypair.fromSecretKey(Uint8Array.from(deviceWallet));
   const toWallet = new PublicKey(
     "6cut9fD3qTbDRFara7sZo7tnBGi6y3unmZKSt96VhcDU"
   );
