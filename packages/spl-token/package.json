@@ -1,0 +1,27 @@
+{
+  "name": "spl-token",
+  "version": "0.0.0",
+  "description": "Create, mint and transfer new SPL token to wallet",
+  "author": "Theo Roque <theoroque95@gmail.com>",
+  "homepage": "https://github.com/theoroque95/module3-project#readme",
+  "license": "ISC",
+  "main": "lib/spl-token.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "type": "module",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theoroque95/module3-project.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/theoroque95/module3-project/issues"
+  }
+}
